@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="icon" href="data:;base64,="> -->
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <a href="www.baic.com" style="-webkit-touch-callout: none">111测试默认链接</a>
+    <button onclick="get()">get请求</button>
+</body>
+    <script type="text/javascript">
+        function get() {
+            var xhr = new XMLHttpRequest();
+            // xhr.responseType = "blob";
+            xhr.open('GET', 'getlist', true);
+            xhr.onreadystatechange = function() {
+              // readyState == 4说明请求已完成
+              if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) {
+                // 从服务器获得数据
+                var data = xhr.response.replace(/\s/g, '').replace(/\r\n\t/g, '')
+                console.log(xhr.response.length, data.length, data)
+                xhr.response = xhr.response.replace(/\s/g, '')
+                var reg = /\<divclass\=\"iSelectList\">(.*)\<\/div>/g
+                var result = reg.exec(data)
+                console.log(result, 88)
+              }
+            };
+            xhr.send();
+        }
+    </script>
+</html>

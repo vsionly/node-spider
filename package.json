@@ -1,0 +1,28 @@
+{
+  "name": "node-spider",
+  "version": "1.0.0",
+  "description": "node实现的爬虫功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsionly/node-spider.git"
+  },
+  "keywords": "node spide node爬虫 爬虫 node抓取",
+  "author": "vsionly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsionly/node-spider/issues"
+  },
+  "homepage": "https://github.com/vsionly/node-spider#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "color7log": "^1.2.13",
+    "iconv-lite": "^0.5.0",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "zlib": "^1.0.5"
+  }
+}
